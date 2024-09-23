@@ -39,7 +39,65 @@
          </div>
     </header>
     <main>
-        
+        <main class="w-4/5 mx-auto mt-10">
+            <div class="flex gap-2 justify-center md:justify-start">
+                <h3 class="font-extrabold text-3xl text-black">Important FAQ</h3>
+                <i class="fa-solid fa-clipboard-question text-black text-3xl"></i>
+            </div>
+            <div class="mt-5">
+                <div class="join join-vertical w-full">
+                    <!-- 1 -->
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                      <input type="radio" name="my-accordion-4" checked="checked" />
+                      <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                      <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface for the web documents.In an HTML document,DOM allows JavaScript to access and modify the contents of the page.This is how interactive features on websites are implemented.</p>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                      <input type="radio" name="my-accordion-4" />
+                      <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                      <div class="collapse-content">
+                        <p>There are many ways to select an element: <br>
+                            <ul>
+                                <li>1.getElementById()</li>
+                                <li>2.getElementsByClassName()</li>
+                                <li>3.getElementsByTagName()</li>
+                                <li>4.querySelector()</li>
+                                <li>5.querySelectorAll()</li>
+                            </ul>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                      <input type="radio" name="my-accordion-4" />
+                      <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                      <div class="collapse-content">
+                        <p>Event delegation is a technique in JS that set event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated.Instead of adding individual event listeners to multiple child elements,one can add a single event listener to a parent element.This parent element can then manage all events that bubble up from its child elements.</p>
+                      </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                        <input type="radio" name="my-accordion-4" />
+                        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attribute and styles using the DOM?</div>
+                        <div class="collapse-content">
+                          <p>There are many ways to manipulate an element's attributes and styles using the DOM:
+                            <ul>
+                                <li>1.setAttribute()</li>
+                                <li>2.getAttribute()</li>
+                                <li>3.removeAttribute()</li>
+                            </ul>
+                            <p>For styling:</p>
+                            <p>One can directly set the 'style' property of an element</p>
+                            <p>One can use the 'classList' property to add, remove, or toggle classes</p>
+                          </p>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </main>
     </main>
     <footer class="h-[50px] bg-[#f9f7f3] mt-5">
 
