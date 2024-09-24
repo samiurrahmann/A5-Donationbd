@@ -1,10 +1,74 @@
+// menu button
+const historyBtn = document.getElementById('history-btn');
+const donationBtn = document.getElementById('donation-btn');
+// sections
+const donationSec =  document.getElementById('donation-sec');
+const historySec = document.getElementById('history-sec');
+// donation buttons
+const noakhaliBtn = document.getElementById('noakhali-btn')
+const feniBtn = document.getElementById('feni-btn')
+const quotaBtn = document.getElementById('quota-btn')
 
-window.addEventListener('scroll', function () {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('nav-scrolled');
-    } else {
-        navbar.classList.remove('nav-scrolled');
-    }
-});
+// menu btn click handles
+historyBtn.addEventListener('click',function(){
+    donationSec.classList.add('hidden');
+    historySec.classList.remove('hidden');
 
+    historyBtn.classList.add('bg-[#B4F461]','text-black')
+    historyBtn.classList.remove('border-2' ,'border-[#111111B3]','text-[#111111B3]')
+
+    donationBtn.classList.remove('bg-[#B4F461]','text-black')
+    donationBtn.classList.add('border-2' ,'border-[#111111B3]','text-[#111111B3]')
+
+
+})
+
+donationBtn.addEventListener('click',function(){
+    donationSec.classList.remove('hidden');
+    historySec.classList.add('hidden');
+
+    donationBtn.classList.add('bg-[#B4F461]','text-black')
+    donationBtn.classList.remove('border-2' ,'border-[#111111B3]','text-[#111111B3]')
+
+    historyBtn.classList.remove('bg-[#B4F461]','text-black')
+    historyBtn.classList.add('border-2' ,'border-[#111111B3]','text-[#111111B3]')
+
+})
+
+// donation handles all
+
+// noakhali
+noakhaliBtn.addEventListener('click',function(){
+    
+    const myBalance = getBalance('my-balance')
+    const inputAmount = getInputValue('noakhali-input-value');
+    const noakhaliBalance = getBalance('noakhali-balance')
+    const noakhaliTitle = document.getElementById('noakhali-title').innerText;
+
+    calculate(inputAmount,myBalance,noakhaliBalance,'noakhali-balance',noakhaliTitle);
+
+})
+
+
+// feni
+feniBtn.addEventListener('click',function(){
+    
+    const myBalance = getBalance('my-balance')
+    const inputAmount = getInputValue('feni-input-value');
+    const feniBalance = getBalance('feni-balance')
+    const feniTitle = document.getElementById('feni-title').innerText;
+
+    calculate(inputAmount,myBalance,feniBalance,'feni-balance',feniTitle);
+
+})
+
+// quota
+quotaBtn.addEventListener('click',function(){
+    
+    const myBalance = getBalance('my-balance')
+    const inputAmount = getInputValue('quota-input-value');
+    const quotaBalance = getBalance('quota-balance')
+    const quotaTitle = document.getElementById('quota-title').innerText;
+    calculate(inputAmount,myBalance,quotaBalance,'quota-balance',quotaTitle);
+
+})
